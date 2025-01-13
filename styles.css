@@ -1,0 +1,141 @@
+/* 
+- font-family : nom personalisé que je vais utiliser dans mon code
+- format (truetype (font, ttf) ou autre, woff, woff2, opentype) est juste le type du fichier 
+    - recommendation fournir plusieurs format de fichier pour chaque fonte pour maximiser la compatibilité (reco : woff2, woff et ttf)
+    - font weight indique le poids
+
+
+    
+*/
+
+/* 
+- police entr 14-16px 
+- marge interne et externe
+-empilement des élémentss
+- max width pour limiter la largeur
+
+
+- utilisation des media queries pour les ecran plus grands
+
+*/
+
+
+
+@font-face{
+    font-family: 'DMSans' ;
+    src: url('/assets/fonts/static/DMSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSans' ;
+    src: url('/assets/fonts/static/DMSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/assets/fonts/static/DMSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+:root{
+    --purple-100 : hsl(254, 88%, 90%) ;
+    --purple-500 : hsl(256, 67%, 59%);
+
+    --yellow-100 : hsl(31, 66%, 93%);
+    --yellow-500 : hsl(39, 100%, 71%); 
+    
+    --white : hsl(0, 0%, 100%);
+    --black : hsl(0, 0%, 7%);
+
+    --greybg : hsl(0, 0%, 95%);
+/* revenir dessus pour se renseigner sur le scss et taillwind css */
+    
+}
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    overflow-x: hidden ;
+    /* je peux toujours defiller horizontalement avec mes image est ce normal alors que overflow x hidden ? */
+    background-color: var(--greybg) ;
+    font-family: 'DMSans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    display: block; /* Supprime les espaces blancs causés par les images inline */
+  }
+  
+
+.section{
+    text-align: center;
+    
+    border-radius: 10px;
+    padding: 30px;
+    /* margin: 15px auto; */
+    /* centrer horizontalement sans ajouter de marge latérale inutile. */
+
+    min-height: 100px;
+    max-width: 375px;
+    width: 100%;
+    /* padding: 20px; */
+    /* margin: 20px; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    /* 
+    -hoover
+    -transition
+    - section:hover ou autre :
+    @media pour ajuster le margin, le padding et la taille de textes pour les petits ecrans
+    */
+}
+
+.section--purple-100{
+    color : var(--black) ;
+    background-color: var(--purple-100);
+}
+
+.section--purple-500{
+    color : var(--white) ;
+    background-color : var(--purple-500);
+}
+
+.section--yellow-100{
+    color : var(--black);
+    background-color: var(--purple-100);
+}
+
+.section--yellow-500{
+    color : var(--black);
+    background-color: var(--yellow-500);
+}
+
+.section--white{
+    color: var(--black);
+    background-color: var(--white);
+}
+
