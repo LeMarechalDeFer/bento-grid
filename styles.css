@@ -13,13 +13,41 @@
 - marge interne et externe
 -empilement des élémentss
 - max width pour limiter la largeur
+-tester les pseudo-éléments
 
 
 - utilisation des media queries pour les ecran plus grands
 
 */
+ /* width: 100%; */
+    /* padding: 20px; */
+    /* margin: 20px; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    /* 
+    -hoover
+    -transition
+    - section:hover ou autre :
+    @media pour ajuster le margin, le padding et la taille de textes pour les petits ecrans
+    */
+     /* centrer horizontalement sans ajouter de marge latérale inutile. */
 
+     /* <!-- 
+     - tailles des étoile
+     - yellow
+     -centrage texte 
+ 
+ 
+   - police : fonte + taille des textes
+   - vue telephone
+   - couleurs bg et texte
+   -span ?
+   --> */
 
+   /* 
+   - flexbox
+   - css grid
+   - media query
+    */
 
 @font-face{
     font-family: 'DMSans' ;
@@ -72,7 +100,13 @@
     
 }
 
-body, h1, p {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, p {
     margin: 0;
     padding: 0;
   }
@@ -82,36 +116,41 @@ body {
     /* je peux toujours defiller horizontalement avec mes image est ce normal alors que overflow x hidden ? */
     background-color: var(--greybg) ;
     font-family: 'DMSans', Arial, sans-serif;
-    box-sizing: border-box;
+    /* les autres polices sont les polices de secours */
+    line-height: 0.9;
 }
 
 img {
     max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
-    height: auto; /* Garde les proportions de l'image */
-    display: block; /* Supprime les espaces blancs causés par les images inline */
+    height: auto; /* Garde les proportions de l'image */ 
   }
-  
+
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h1{
+    font-weight: 500;
+}
+
 
 .section{
     text-align: center;
     
     border-radius: 10px;
-    padding: 30px;
-    /* margin: 15px auto; */
-    /* centrer horizontalement sans ajouter de marge latérale inutile. */
+   
+    padding: 15px;
+    
+    
+    margin: 15px ;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
-    min-height: 100px;
     max-width: 375px;
-    width: 100%;
-    /* padding: 20px; */
-    /* margin: 20px; */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-    /* 
-    -hoover
-    -transition
-    - section:hover ou autre :
-    @media pour ajuster le margin, le padding et la taille de textes pour les petits ecrans
-    */
+
+
+   
 }
 
 .section--purple-100{
@@ -122,11 +161,13 @@ img {
 .section--purple-500{
     color : var(--white) ;
     background-color : var(--purple-500);
+   
+    
 }
 
 .section--yellow-100{
     color : var(--black);
-    background-color: var(--purple-100);
+    background-color: var(--yellow-100);
 }
 
 .section--yellow-500{
@@ -139,3 +180,11 @@ img {
     background-color: var(--white);
 }
 
+.highlight-yellow{
+    color : var(--yellow-500);
+}
+
+.highlight-purple{
+    color : var(--purple-500);
+    font-style: italic;
+}
