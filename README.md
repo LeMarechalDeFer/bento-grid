@@ -2,5 +2,10 @@
 
 imperfection : 
 
-- question de la border
+
 - gradiant degrader
+
+
+
+- je ne comprends pas la flex box 
+- 
