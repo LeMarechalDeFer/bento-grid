@@ -113,7 +113,6 @@ body, h1, h2, p {
   
 body {
     overflow-x: hidden ;
-    /* je peux toujours defiller horizontalement avec mes image est ce normal alors que overflow x hidden ? */
     background-color: var(--greybg) ;
     font-family: 'DMSans', Arial, sans-serif;
     /* les autres polices sont les polices de secours */
@@ -121,8 +120,8 @@ body {
 }
 
 img {
-    max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
-    height: auto; /* Garde les proportions de l'image */ 
+    max-width: 100%; 
+    height: auto; 
   }
 
 p{
@@ -187,6 +186,125 @@ h1{
 .highlight-purple{
     color : var(--purple-500);
     font-style: italic;
+}
+
+
+#socialmedia {
+    min-height: 250px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#socialmedia img{
+    width: 60%;
+}
+
+#socialmedia h1{
+    font-size: 2.5rem;
+}
+
+#socialmedia p{
+    font-weight: 400; margin-top: 10px;
+}
+
+#multipleplatforms{
+    padding-bottom: 20px;
+}
+
+#multipleplatforms h2{
+    text-align: left;
+    margin-top: 12px; 
+}
+
+#schedulepost{
+    padding-bottom: 0; 
+    text-align: left;
+}
+
+#schedulepost img{
+    width: 60%;
+    display: block;
+}
+
+#schedulepost h2{
+    padding-bottom: 20px;
+}
+
+
+#schedulemedia{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#schedulemedia h2{
+    padding-bottom: 30px;
+}
+
+#schedulemedia p{
+    padding-top: 30px;
+}
+
+#growfollowers{
+    padding-bottom: 30px;
+}
+
+#growfollowers img {
+    width: 80%;
+}
+
+#audiencegrowth{
+    padding-bottom: 30px; 
+    padding-top: 30px;
+}
+
+#audiencegrowth h2{
+    text-align: left;
+}
+
+#audiencegrowth img{
+    width: 60%;
+    display: block;
+}
+
+.large-text{
+    font-size: 3rem; 
+    font-weight:500;
+}
+
+.medium-text{
+    font-weight: 500; 
+    font-size: large;
+    line-height: 3;
+}
+
+#quicker{
+    text-align: left; 
+    padding: 30px;
+}
+
+#quicker h2{
+    font-size: 1.8rem; 
+    padding-bottom: 20px;
+}
+
+#quicker img{
+    display: block;
+    width: 70%;
+}
+
+
+
+#aiwriting{
+    text-align: left; 
+    padding: 30px;
+}
+
+#aiwriting h2{
+    font-size: 1.8rem;
+}
+
+#airwriting img{
+    width: 80%;
 }
 
 
